@@ -1,7 +1,10 @@
 import { useEffect, useState } from 'react';
 import classNames from 'classnames/bind';
 import Tippy from '@tippyjs/react/headless';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
+import Button from '~/components/Button';
 import styles from './Header.module.scss';
 import images from '~/assets/images';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
@@ -46,8 +49,8 @@ function Header() {
                     </div>
                 </Tippy>
                 <div className={cx('action')}>
-                    <button>upload</button>
-                    <button>login</button>
+                    <Button text leftIcon={<FontAwesomeIcon icon={faPlus} />}>Upload</Button>
+                    <Button primary >Log in</Button>
                 </div>
             </div>
         </header>
