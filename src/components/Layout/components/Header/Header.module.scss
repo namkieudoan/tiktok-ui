@@ -55,13 +55,16 @@
     &:focus-within {
         border-color: rgba(22, 24, 35, 0.2);
     }
-    span {
-        width: 22px;
+    .close {
+        font-size: 1.6rem;
+        color: rgba(22, 24, 35, 0.34);;
+        margin-right: calc( (var(--search-btn-width))/4 );
         line-height: var(--search-height);
     }
 }
 
 .search-btn {
+    font-size: 1.6rem;
     width: var(--search-btn-width);
     border-top-right-radius: var(--search-border-radius);
     border-bottom-right-radius: var(--search-border-radius);

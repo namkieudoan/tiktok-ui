@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import classNames from 'classnames/bind';
 import Tippy from '@tippyjs/react/headless';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faCircleXmark, faPlus, faSearch, faSpinner } from '@fortawesome/free-solid-svg-icons';
 
 import Button from '~/components/Button';
 import styles from './Header.module.scss';
@@ -43,9 +43,14 @@ function Header() {
                 >
                     <div className={cx('search')}>
                         <input type="text" placeholder="Search accounts and videos" spellCheck={false} />
-                        <span>&#10005;</span>
+                        <button className={cx('close')}>
+                            <FontAwesomeIcon icon={faCircleXmark} />
+                            {/* <FontAwesomeIcon icon={faSpinner} /> */}
+                        </button>
 
-                        <button className={cx('search-btn')}>Search</button>
+                        <button className={cx('search-btn')}>
+                            <FontAwesomeIcon icon={faSearch} />
+                        </button>
                     </div>
                 </Tippy>
                 <div className={cx('action')}>
