@@ -4,29 +4,27 @@ import Tippy from '@tippyjs/react';
 import HeadlessTippy from '@tippyjs/react/headless';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-    faBox,
-    faCircleXmark,
     faEllipsisVertical,
     faGear,
     faKeyboard,
     faLanguage,
-    faMessage,
     faMoon,
     faPlus,
     faQuestion,
     faRecordVinyl,
-    faSearch,
     faSignOut,
     faUser,
 } from '@fortawesome/free-solid-svg-icons';
 
 import images from '~/assets/images';
+import Image from '~/components/images';
 import Button from '~/components/Button';
 import styles from './Header.module.scss';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import AccountItem from '~/components/AccountItem';
 import Menu from '~/components/Popper/Menu';
 import 'tippy.js/dist/tippy.css';
+import { CloseIcon, InboxIcon, MessagesIcon, SearchIcon } from '~/components/Icons';
 
 const cx = classNames.bind(styles);
 const MENU_LIST = [
@@ -131,12 +129,11 @@ function Header() {
                     <div className={cx('search')}>
                         <input type="text" placeholder="Search accounts and videos" spellCheck={false} />
                         <button className={cx('close')}>
-                            <FontAwesomeIcon icon={faCircleXmark} />
-                            {/* <FontAwesomeIcon icon={faSpinner} /> */}
+                            <CloseIcon/>
                         </button>
 
                         <button className={cx('search-btn')}>
-                            <FontAwesomeIcon icon={faSearch} />
+                            <SearchIcon/>
                         </button>
                     </div>
                 </HeadlessTippy>
@@ -148,12 +145,12 @@ function Header() {
                             </Button>
                             <Tippy content="Messages" placement="bottom">
                                 <button className={cx('action-btn')}>
-                                    <FontAwesomeIcon icon={faMessage} />
+                                    <MessagesIcon />
                                 </button>
                             </Tippy>
                             <Tippy content="Inbox" placement="bottom">
                                 <button className={cx('action-btn')}>
-                                    <FontAwesomeIcon icon={faBox} />
+                                    <InboxIcon />
                                 </button>
                             </Tippy>
                         </>
@@ -168,11 +165,12 @@ function Header() {
 
                     {currentUser ? (
                         <Menu items={userMenu} onChange={handleMenuChange}>
-                            <img
+                            <Image
                                 className={cx('user-avatar')}
-                                alt="NguyenVanA"
                                 src="https://kenh14cdn.com/thumb_w/660/2019/8/4/truong-hoang-mai-anh-5-15289944329201592989899-15649379784292010287411.jpg"
-                            ></img>
+                                alt="Nguyen Van A"
+                                fallBack = "~/images/no-image.png"
+                            />
                         </Menu>
                     ) : (
                         <Menu items={MENU_LIST} onChange={handleMenuChange}>
