@@ -37,12 +37,28 @@
     &:focus-within {
         border-color: rgba(22, 24, 35, 0.2);
     }
-    .close {
-        font-size: 1.6rem;
-        color: rgba(22, 24, 35, 0.34);
-        margin-right: calc((var(--search-btn-width)) / 4);
-        line-height: var(--search-height);
+    .clear,
+    .loading {
+    position: absolute;
+    right: calc(var(--search-btn-width) + 16px);
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(22, 24, 35, 0.34);
+}
+
+    .loading {
+        animation: spinner 0.5s linear infinite;
     }
+
+    @keyframes spinner {
+        from {
+            transform: translateY(-50%) rotate(0);
+        }
+        to{
+            transform: translateY(-50%) rotate(360deg);
+        }
+    }
+
 }
 
 .search-title {
