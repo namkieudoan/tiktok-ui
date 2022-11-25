@@ -1,7 +1,5 @@
-import { useEffect, useState } from 'react';
 import classNames from 'classnames/bind';
 import Tippy from '@tippyjs/react';
-import HeadlessTippy from '@tippyjs/react/headless';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faEllipsisVertical,
@@ -20,11 +18,10 @@ import images from '~/assets/images';
 import Image from '~/components/images';
 import Button from '~/components/Button';
 import styles from './Header.module.scss';
-import { Wrapper as PopperWrapper } from '~/components/Popper';
-import AccountItem from '~/components/AccountItem';
+import Search from '../Search';
 import Menu from '~/components/Popper/Menu';
 import 'tippy.js/dist/tippy.css';
-import { CloseIcon, InboxIcon, MessagesIcon, SearchIcon } from '~/components/Icons';
+import { InboxIcon, MessagesIcon } from '~/components/Icons';
 
 const cx = classNames.bind(styles);
 const MENU_LIST = [
@@ -96,14 +93,7 @@ const handleMenuChange = (menuItem) => {
     }
 };
 function Header() {
-    const [searchResult, setSearchResult] = useState([]);
     const currentUser = true;
-    useEffect(() => {
-        setTimeout(() => {
-            setSearchResult([]);
-            return setSearchResult;
-        }, 0);
-    }, []);
 
     return (
         <header className={cx('wrapper')}>
@@ -111,32 +101,9 @@ function Header() {
                 <div className={cx('logo')}>
                     <img src={images.logo} alt="tiktok" />
                 </div>
-                <HeadlessTippy
-                    interactive
-                    visible={searchResult.length > 0}
-                    render={(attrs) => (
-                        <div className={cx('search-result')} tabIndex="-1" {...attrs}>
-                            <PopperWrapper>
-                                <h4 className={cx('search-title')}>Accounts</h4>
-                                <AccountItem />
-                                <AccountItem />
-                                <AccountItem />
-                                <AccountItem />
-                            </PopperWrapper>
-                        </div>
-                    )}
-                >
-                    <div className={cx('search')}>
-                        <input type="text" placeholder="Search accounts and videos" spellCheck={false} />
-                        <button className={cx('close')}>
-                            <CloseIcon/>
-                        </button>
 
-                        <button className={cx('search-btn')}>
-                            <SearchIcon/>
-                        </button>
-                    </div>
-                </HeadlessTippy>
+                <Search />
+
                 <div className={cx('action')}>
                     {currentUser ? (
                         <>
@@ -151,6 +118,7 @@ function Header() {
                             <Tippy content="Inbox" placement="bottom">
                                 <button className={cx('action-btn')}>
                                     <InboxIcon />
+                                    <span className={cx('badge')}>12</span>
                                 </button>
                             </Tippy>
                         </>
@@ -169,7 +137,6 @@ function Header() {
                                 className={cx('user-avatar')}
                                 src="https://kenh14cdn.com/thumb_w/660/2019/8/4/truong-hoang-mai-anh-5-15289944329201592989899-15649379784292010287411.jpg"
                                 alt="Nguyen Van A"
-                                fallBack = "~/images/no-image.png"
                             />
                         </Menu>
                     ) : (
