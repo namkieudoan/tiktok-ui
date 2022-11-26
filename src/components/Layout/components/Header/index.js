@@ -14,6 +14,7 @@ import {
     faUser,
 } from '@fortawesome/free-solid-svg-icons';
 
+import routesConfig from '~/config/routes';
 import images from '~/assets/images';
 import Image from '~/components/images';
 import Button from '~/components/Button';
@@ -99,7 +100,7 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <Link to="/" className={cx('logo')}>
+                <Link to={routesConfig.home} className={cx('logo')}>
                     <img src={images.logo} alt="tiktok" />
                 </Link>
 

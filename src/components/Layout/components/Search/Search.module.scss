@@ -9,14 +9,15 @@
     border-radius: var(--search-border-radius);
     padding-left: 16px;
     display: flex;
+    align-items: center;
     border: 1.5px solid transparent;
 
     input {
         flex: 1;
-        font-size: var(--font-size-14px);
-        font-weight: 400;
-        height: 100%;
-        color: rgba(22, 24, 35, 1);
+        font-size: var(--font-size-16px);
+        font-family: var(--font-family);
+        height: var(--search-height);
+        color: var(--black);
         background-color: transparent;
         caret-color: rgba(254, 44, 85, 1);
     }
@@ -39,12 +40,12 @@
     }
     .clear,
     .loading {
-    position: absolute;
-    right: calc(var(--search-btn-width) + 16px);
-    top: 50%;
-    transform: translateY(-50%);
-    color: rgba(22, 24, 35, 0.34);
-}
+        position: absolute;
+        right: calc(var(--search-btn-width) + 16px);
+        top: 50%;
+        transform: translateY(-50%);
+        color: rgba(22, 24, 35, 0.34);
+    }
 
     .loading {
         animation: spinner 0.5s linear infinite;
@@ -54,11 +55,10 @@
         from {
             transform: translateY(-50%) rotate(0);
         }
-        to{
+        to {
             transform: translateY(-50%) rotate(360deg);
         }
     }
-
 }
 
 .search-title {
@@ -71,6 +71,7 @@
 .search-btn {
     font-size: 1.6rem;
     width: var(--search-btn-width);
+    height: 100%;
     border-top-right-radius: var(--search-border-radius);
     border-bottom-right-radius: var(--search-border-radius);
     color: rgba(22, 24, 35, 0.34);
