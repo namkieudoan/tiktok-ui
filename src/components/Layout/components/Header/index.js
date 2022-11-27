@@ -42,7 +42,7 @@ const MENU_LIST = [
                     type: 'language',
                     code: 'vi',
                     title: 'Tiếng Việt',
-                },
+                }
             ],
         },
     },

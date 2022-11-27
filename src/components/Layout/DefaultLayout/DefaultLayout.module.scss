@@ -5,7 +5,8 @@
 }
 .container {
     padding: 0 var(--default-layout-horizontal-spacer);
-    width: var(--default-layout-width,1150px);
+    width: var(--default-layout-width, 1150px);
+    margin-top: var(--default-layout-header-height);
     min-height: 1000px;
     display: flex;
 }
