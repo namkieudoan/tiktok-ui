@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { publicRoutes } from '~/routes';
+import { publicRoutes } from '~/routes/routes';
 import { DefaultLayout } from '~/layouts';
 // thẻ fragment để chứa layout:null (upload page)
 import { Fragment } from 'react';
