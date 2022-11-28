@@ -8,7 +8,7 @@ import AccountItem from '~/components/AccountItem';
 import { useDebounce } from '~/hooks';
 import 'tippy.js/dist/tippy.css';
 import { ClearIcon, SearchIcon, LoadingIcon } from '~/components/Icons';
-import * as searchService from '~/apiServices/searchService';
+import * as searchService from '~/services/searchService';
 
 const cx = classNames.bind(styles);
 

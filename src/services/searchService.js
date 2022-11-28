@@ -1,7 +1,7 @@
-import * as request from '~/ultis/resquest';
+import * as httpRequest from '~/ultis/httpResquest';
 export const search = async (q, type = 'less') => {
     try {
-        const res = await request.get('api/users/search', {
+        const res = await httpRequest.get('api/users/search', {
             params: {
                 q,
                 type,
