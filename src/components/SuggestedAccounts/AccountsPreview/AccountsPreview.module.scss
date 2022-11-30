@@ -1,0 +1,57 @@
+.wrapper {
+    padding: 20px;
+    min-width: 320px;
+    margin-top: -8px;
+
+}
+
+.header {
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nickname {
+    font-family: SofiaPro;
+    font-size: 1.8rem;
+    color: #161823;
+}
+
+.icon-checked {
+    font-size: 1.4rem;
+    padding-left: 4px;
+    color:  rgb(32, 213, 236);;
+}
+
+.name {
+    font-size: 1.4rem;
+    color: #161823;
+}
+
+
+.analytics {
+    margin-top: 8px;
+    
+}
+
+.value,
+.label{
+    font-size: 1.7rem;
+    color: #161823;
+}
+
+.value{
+    margin-right: 6px;
+}
+
+.label {
+    margin-right: 12px;
+}
