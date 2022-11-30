@@ -70,8 +70,25 @@
 .small {
     min-width: 106px;
     height: 32px;
+    font-size: 1.4rem;
+
+    + .small {
+        margin-right: 8px;
+        margin-bottom: 12px;
+        margin-left: 6px;
+    }
 }
 .large {
     min-width: 140px;
     padding: 14px 16px;
+}
+.text-underline {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    min-width: 0;
+    padding: 0;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }

@@ -1,5 +1,15 @@
 .wrapper {
-    width: 356px;
-    padding: 20px 8px 26px;
+    position: fixed;
+    top: var(--default-layout-header-height);
+    bottom: 0;
+    padding: 20px 8px 100px 8px;
     margin-left: -20px;
+    width: var(--default-layout-sidebar-width);
+    height: 100%;
+    overflow-y: hidden;
+    
+
+    &:hover {
+        overflow-y: auto;
+    }
 }

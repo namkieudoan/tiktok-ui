@@ -12,6 +12,7 @@
     display: flex;
 }
 .content {
+    margin-left: var(--default-layout-sidebar-width);
     flex: 1;
     min-height: 1000px;
 }
