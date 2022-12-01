@@ -3,7 +3,7 @@
     top: var(--default-layout-header-height);
     bottom: 0;
     padding: 20px 8px 100px 8px;
-    margin-left: -20px;
+    margin-left: -10px;
     width: var(--default-layout-sidebar-width);
     height: 100%;
     overflow-y: hidden;
@@ -12,4 +12,13 @@
     &:hover {
         overflow-y: auto;
     }
+}
+.login-section {
+    border-top: 1px solid rgba(22, 24, 35, .12);
+    padding: 20px 8px 24px 0px;
+}
+.heading {
+    font-size: 1.6rem;
+    color: #16182380;
+    margin-bottom: 24px;
 }

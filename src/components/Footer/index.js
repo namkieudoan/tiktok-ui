@@ -8,7 +8,7 @@ function Footer() {
     return (
         <div className={cx('wrapper')}>
             <div className={cx('heading')}>
-            <Button to={'/about'} className={cx('text-underline')}> About </Button>
+            <Button to={'/about'} className={cx('text-underline')} > About </Button>
             <Button to={'/about'} className={cx('text-underline')}> News </Button>
             <Button to={'/about'} className={cx('text-underline')}> Contact </Button>
             <Button to={'/about'} className={cx('text-underline')}> Career </Button>
