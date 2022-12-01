@@ -1,0 +1,23 @@
+.wrapper {
+    position: relative;
+    width: 484px;
+    height: 584px;
+    border-radius: 8px;
+    background-color: var(--white);
+    margin: auto;
+    box-shadow: rgb(0 0 0 / 12%) 0px 2px 12px;
+    z-index: 2;
+    
+}
+.body {
+    display: flex;
+
+}
+.container {
+    width: 374px;
+    margin: auto;
+}
+.btn-reg {
+    color: var(--primary);
+
+}

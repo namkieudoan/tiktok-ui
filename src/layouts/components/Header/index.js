@@ -21,6 +21,8 @@ import Button from '~/components/Button';
 import styles from './Header.module.scss';
 import Search from '../Search';
 import Menu from '~/components/Popper/Menu';
+import { Wrapper as ModalWrapper } from '~/components/Modal';
+import LoginModal from '~/components/Modal/Login';
 import 'tippy.js/dist/tippy.css';
 import { InboxIcon, MessagesIcon } from '~/components/Icons';
 import { Link } from 'react-router-dom';
@@ -95,7 +97,7 @@ const handleMenuChange = (menuItem) => {
     }
 };
 function Header() {
-    const currentUser = true;
+    const currentUser = false;
 
     return (
         <header className={cx('wrapper')}>
@@ -149,6 +151,15 @@ function Header() {
                         </Menu>
                     )}
                 </div>
+
+                {/* modal login */}
+                {!currentUser ? 
+                (
+                    <ModalWrapper >
+                        <LoginModal/>
+                    </ModalWrapper>
+                ):(<></>)
+                }
             </div>
         </header>
     );

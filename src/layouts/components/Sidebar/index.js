@@ -14,13 +14,13 @@ import {
 } from '~/components/Icons';
 import SuggestedAccounts from '~/components/SuggestedAccounts';
 import Discover from '~/components/Discover';
-import Footer from '~/components/Footer';
+import Footer from '~/layouts/components/Footer';
 import Button from '~/components/Button';
 
 const cx = classNames.bind(styles);
 
 function Sidebar() {
-    const currentUser = true;
+    const currentUser = false;
     return (
         <aside className={cx('wrapper')}>
             <Menu>

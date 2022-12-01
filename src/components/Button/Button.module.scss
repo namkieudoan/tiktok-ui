@@ -29,6 +29,9 @@
     display: inline-block;
     width: 24px;
 }
+.title {
+    flex: 1;
+} 
 //button type
 .primary {
     background-color: var(--primary);
@@ -50,6 +53,7 @@
 .text {
     color: var(--text-color);
     border-color: rgba(22, 24, 35, 0.12);
+    font-size: 1.5rem;
 
     &:hover {
         background-color: rgba(22, 24, 35, 0.03);
@@ -92,4 +96,9 @@
     &:hover {
         text-decoration: underline;
     }
+}
+
+//common
+.ml16 {
+    margin-left: 16px;
 }
