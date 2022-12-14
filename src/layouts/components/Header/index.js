@@ -97,7 +97,7 @@ const handleMenuChange = (menuItem) => {
     }
 };
 function Header() {
-    const currentUser = false;
+    const currentUser = true;
 
     return (
         <header className={cx('wrapper')}>
@@ -153,13 +153,13 @@ function Header() {
                 </div>
 
                 {/* modal login */}
-                {!currentUser ? 
+                {/* {!currentUser ? 
                 (
                     <ModalWrapper >
                         <LoginModal/>
                     </ModalWrapper>
                 ):(<></>)
-                }
+                } */}
             </div>
         </header>
     );
